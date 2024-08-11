@@ -1,0 +1,84 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Styling the container to center content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Styling the button to open the modal */
+.openModalBtn {
+    background-color: black;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.openModalBtn:hover {
+    background-color: green;
+}
+
+/* Styling the modal popup */
+.popup {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.35s, visibility 0.35s;
+    visibility: hidden;
+}
+
+/* Adding some padding and line-height to the paragraph inside the modal */
+.popup p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Styling the close button inside the modal */
+.closeModalBtn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.closeModalBtn:hover {
+    background-color: #218838;
+}
+
+/* Making the modal visible and scaling it to full size when opened */
+.popup_open {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 340px) {
+    .popup {
+        width: 80vw;
+    }
+}
